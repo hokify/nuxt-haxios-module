@@ -1,7 +1,7 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
-import { IAxiosRetryConfig } from 'axios-retry'
 import Vue from 'vue'
 import './vuex'
+import { RetryConfig } from 'gaxios'
 
 interface NuxtAxiosInstance extends AxiosStatic {
   $request<T = any>(config: AxiosRequestConfig): Promise<T>
@@ -18,9 +18,9 @@ interface NuxtAxiosInstance extends AxiosStatic {
   setToken(token: string | false, type?: string, scopes?: string | string[]): void
 
   onRequest(callback: (config: AxiosRequestConfig) => void | AxiosRequestConfig | Promise<AxiosRequestConfig>): void
-  onResponse<T = any>(callback: (response: AxiosResponse<T>) => void | AxiosResponse<T> | Promise<AxiosResponse<T>> ): void
+  onResponse<T = any>(callback: (response: AxiosResponse<T>) => void | AxiosResponse<T> | Promise<AxiosResponse<T>>): void
   onError(callback: (error: AxiosError) => any): void
-  onRequestError(callback: (error: AxiosError) => any): void 
+  onRequestError(callback: (error: AxiosError) => any): void
   onResponseError(callback: (error: AxiosError) => any): void
 
   create(options?: AxiosRequestConfig): NuxtAxiosInstance
@@ -38,7 +38,7 @@ interface AxiosOptions {
   proxyHeadersIgnore?: string[],
   proxy?: boolean,
   port?: string | number,
-  retry?: boolean | IAxiosRetryConfig,
+  retry?: boolean | RetryConfig,
   https?: boolean,
   headers?: {
     common?: Record<string, string>,
@@ -46,6 +46,7 @@ interface AxiosOptions {
     get?: Record<string, string>,
     head?: Record<string, string>,
     post?: Record<string, string>,
+    options?: Record<string, string>,
     put?: Record<string, string>,
     patch?: Record<string, string>,
   },

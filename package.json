@@ -1,10 +1,11 @@
 {
-  "name": "@nuxtjs/axios",
-  "version": "5.13.6",
-  "description": "Secure and easy Axios integration with Nuxt.js",
-  "repository": "nuxt-community/axios-module",
+  "name": "@nuxtjs/gaxios",
+  "version": "1.0.0",
+  "description": "Secure and easy Gaxios integration with Nuxt.js",
+  "repository": "nuxt-community/gaxios-module",
   "license": "MIT",
   "contributors": [
+    "Simon Tretter <simon.tretter@hokify.com>",
     "Pooya Parsa <pooya@pi0.ir>"
   ],
   "main": "lib/module.js",
@@ -17,25 +18,33 @@
     "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && jest"
+    "build": "rollup -c rollup.axioswrapper.config.js",
+    "build-axios-wrapper": "rollup -c",
+    "prepare-test": "nuxt build test/fixture",
+    "test": "yarn build && yarn build-axios-wrapper && yarn prepare-test && jest"
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "axios": "^0.21.1",
-    "axios-retry": "^3.1.9",
     "consola": "^2.15.3",
-    "defu": "^5.0.0"
+    "defu": "^5.0.0",
+    "gaxios": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "latest",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@typescript-eslint/parser": "^4.33.0",
     "babel-eslint": "latest",
     "babel-jest": "latest",
     "codecov": "latest",
     "eslint": "latest",
     "jest": "latest",
+    "null-loader": "^4.0.1",
     "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "standard-version": "latest",
+    "typescript": "^4.4.3"
   }
 }

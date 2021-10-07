@@ -17,7 +17,7 @@ export default {
 }
 ```
 
-```js{}[plugins/axios.js]
+```js{}[plugins/axios.ts]
 export default function ({ $axios, redirect }) {
   $axios.onRequest(config => {
     console.log('Making request to ' + config.url)

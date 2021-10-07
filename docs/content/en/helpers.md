@@ -19,7 +19,7 @@ Axios plugin provides helpers to register axios interceptors easier and faster.
 
 These functions don't have to return anything by default.
 
-Example: (`plugins/axios.js`)
+Example: (`plugins/axios.ts`)
 
 ```js
 export default function ({ $axios, redirect }) {
@@ -33,7 +33,7 @@ export default function ({ $axios, redirect }) {
 
 When intercepting an error, you can return a resolved promise to prevent the error from propagating. 
 
-Example: (`plugins/axios.js`)
+Example: (`plugins/axios.ts`)
 
 ```js
 export default function ({ $axios, error: nuxtError }) {

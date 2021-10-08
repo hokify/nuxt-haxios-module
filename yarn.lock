@@ -5863,6 +5863,12 @@
     "inherits" "^2.0.3"
     "minimalistic-assert" "^1.0.1"
 
+"haxios@file:../../Dev/other/haxios":
+  "resolved" "file:../../Dev/other/haxios"
+  "version" "1.0.0"
+  dependencies:
+    "gaxios" "^4.3.2"
+
 "he@^1.1.0", "he@^1.2.0", "he@1.2.0":
   "integrity" "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw=="
   "resolved" "https://registry.npmjs.org/he/-/he-1.2.0.tgz"

@@ -18,10 +18,9 @@
     "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "build": "rollup -c rollup.axioswrapper.config.js",
-    "build-axios-wrapper": "rollup -c",
+    "build": "rollup -c",
     "prepare-test": "nuxt build test/fixture",
-    "test": "yarn build && yarn build-axios-wrapper && yarn prepare-test && jest"
+    "test": "yarn build && yarn prepare-test && jest"
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",

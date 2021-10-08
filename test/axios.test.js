@@ -1,7 +1,9 @@
 jest.setTimeout(60000)
 
 const { Nuxt, Builder } = require('nuxt-edge')
-const axios = require('../lib/axioswrapper').default
+const axios = require('haxios')
+
+console.log('axios', axios);
 
 const config = require('./fixture/nuxt.config')
 
@@ -35,7 +37,7 @@ const testSuite = () => {
   })
 
   test('asyncData', async () => {
-    console.log('axios', axios);
+    console.log('axios', axios)
     const html = (await axios.request({ url: url('/asyncData') })).data
     expect(html).toContain('foo/bar')
   })

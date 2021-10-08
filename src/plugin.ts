@@ -1,7 +1,7 @@
 import { Context } from '@nuxt/types'
 import { Inject } from '@nuxt/types/app'
-import { AxiosWrapper } from './axios'
-import { AxiosOptions } from '~/types'
+import { NuxtAxiosWrapper } from './axios'
+import { NuxtAxiosOptions } from '~/types'
 
 const options = JSON.parse('<%= JSON.stringify(options) %>')
 
@@ -21,11 +21,11 @@ const extendAxiosInstance = (axios: any) => {
   }
 } */
 
-const createAxiosInstance = (axiosOptions: AxiosOptions) => {
+const createAxiosInstance = (axiosOptions: NuxtAxiosOptions) => {
   if (options.retry) { axiosOptions.retry = options.retry }
 
   // Create new axios instance
-  const axios = new AxiosWrapper(axiosOptions)
+  const axios = new NuxtAxiosWrapper(axiosOptions)
 
   // Setup interceptors
   // <% if (options.debug) { %>setupDebugInterceptor(axios) <% } %>
@@ -65,7 +65,7 @@ const setupDebugInterceptor = axios => {
   })
 */
 
-const setupCredentialsInterceptor = (axios: AxiosWrapper) => {
+const setupCredentialsInterceptor = (axios: NuxtAxiosWrapper) => {
   // Send credentials only to relative and API Backend requests
   axios.onRequest((config) => {
     if (config.withCredentials === undefined) {
@@ -76,7 +76,7 @@ const setupCredentialsInterceptor = (axios: AxiosWrapper) => {
   })
 }
 
-const setupProgress = (axios: AxiosWrapper) => {
+const setupProgress = (axios: NuxtAxiosWrapper) => {
   if (process.server) {
     return
   }

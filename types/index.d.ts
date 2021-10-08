@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import './vuex'
-import { RetryConfig } from 'gaxios'
+import { AxiosConfig } from 'haxios'
 import { NuxtAxiosWrapper } from '../src/axios'
 
 export type Scope = 'common' | 'delete' | 'get' | 'head' | 'options' | 'post' | 'put' | 'patch';
 
-interface NuxtAxiosOptions {
+interface NuxtAxiosOptions extends Omit<AxiosConfig, 'headers' | 'proxy'> {
   baseURL?: string,
   browserBaseURL?: string,
   credentials?: boolean,
@@ -17,7 +17,6 @@ interface NuxtAxiosOptions {
   proxyHeadersIgnore?: string[],
   proxy?: boolean,
   port?: string | number,
-  retry?: boolean | RetryConfig,
   https?: boolean,
   headers?: {
     common?: Record<string, string>,

@@ -20,13 +20,15 @@
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
     "build": "rollup -c",
     "prepare-test": "nuxt build test/fixture",
-    "test": "yarn build && yarn prepare-test && jest"
+    "test": "yarn build && jest",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
     "consola": "^2.15.3",
     "defu": "^5.0.0",
-    "gaxios": "^4.3.2"
+    "gaxios": "^4.3.2",
+    "haxios": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "latest",
@@ -44,6 +46,7 @@
     "null-loader": "^4.0.1",
     "nuxt-edge": "latest",
     "standard-version": "latest",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "whatwg-fetch": "^3.6.2"
   }
 }

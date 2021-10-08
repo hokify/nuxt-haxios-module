@@ -73,7 +73,6 @@ export class NuxtAxiosWrapper extends AxiosWrapper {
         this.defaults.headers[scope] = {}
       }
       this.defaults.headers[scope]![name] = value
-      console.log('name', name, value)
     }
   }
 

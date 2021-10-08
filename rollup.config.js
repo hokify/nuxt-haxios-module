@@ -9,5 +9,6 @@ export default {
     exports: 'default'
   },
   context: 'this',
-  plugins: [typescript()]
+  plugins: [typescript()],
+  external: ['haxios']
 }

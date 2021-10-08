@@ -1,8 +1,7 @@
 {
-  "name": "@nuxtjs/gaxios",
+  "name": "@hokify/nuxt-haxios-module",
   "version": "1.0.0",
-  "description": "Secure and easy Gaxios integration with Nuxt.js",
-  "repository": "nuxt-community/gaxios-module",
+  "description": "Secure and easy Haxios integration with Nuxt.js",
   "license": "MIT",
   "contributors": [
     "Simon Tretter <simon.tretter@hokify.com>",
@@ -27,7 +26,6 @@
     "@nuxtjs/proxy": "^2.1.0",
     "consola": "^2.15.3",
     "defu": "^5.0.0",
-    "gaxios": "^4.3.2",
     "haxios": "^1.0.0"
   },
   "devDependencies": {

@@ -8,20 +8,20 @@ category: 'Getting started'
 
 ## Install
 
-Add `@nuxtjs/axios` dependency to your project:
+Add `@hokify/nuxt-haxios-module` dependency to your project:
 
 <code-group>
   <code-block label="Yarn" active>
 
   ```bash
-  yarn add @nuxtjs/axios
+  yarn add @hokify/nuxt-haxios-module
   ```
 
   </code-block>
   <code-block label="NPM">
 
   ```bash
-  npm install @nuxtjs/axios
+  npm install @hokify/nuxt-haxios-module
   ```
 
   </code-block>
@@ -31,7 +31,7 @@ Then add it to the `modules` section in your `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
-  modules: ['@nuxtjs/axios']
+  modules: ['@hokify/nuxt-haxios-module']
 }
 ```
 

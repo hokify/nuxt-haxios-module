@@ -1,12 +1,16 @@
 {
   "name": "@hokify/nuxt-haxios-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Secure and easy Haxios integration with Nuxt.js",
   "license": "MIT",
   "contributors": [
     "Simon Tretter <simon.tretter@hokify.com>",
     "Pooya Parsa <pooya@pi0.ir>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hokify/nuxt-haxios-module.git"
+  },
   "main": "lib/module.js",
   "types": "types/index.d.ts",
   "files": [

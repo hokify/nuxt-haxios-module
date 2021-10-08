@@ -3,6 +3,7 @@
 # @hokify/nuxt-haxios-module
 
 drop in replacement for [@nuxtjs/axios](https://github.com/nuxt-community/axios-module) module which uses [haxios](https://github.com/hokify/haxios) (based on [gaxios](https://github.com/googleapis/gaxios)) behind the scene
+(beware: minimum support version of node changed to 14)
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]

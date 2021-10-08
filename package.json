@@ -39,6 +39,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "latest",
     "@rollup/plugin-typescript": "^8.2.5",
+    "rollup": "^2.58.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-eslint": "latest",
     "babel-jest": "latest",

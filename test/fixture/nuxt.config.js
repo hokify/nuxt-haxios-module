@@ -7,17 +7,6 @@ module.exports = {
   render: {
     resourceHints: false
   },
-  build: {
-    extend (config, ctx) {
-      const { isClient } = ctx
-      if (isClient) {
-        config.module.rules.push({
-          test: /node_modules\/https-proxy-agent\//,
-          use: 'null-loader'
-        })
-      }
-    }
-  },
   modules: [
     { handler: require('../../') }
   ],

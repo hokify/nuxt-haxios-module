@@ -1,8 +1,7 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   extends: [

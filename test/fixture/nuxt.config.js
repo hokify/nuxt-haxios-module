@@ -10,12 +10,12 @@ module.exports = {
   modules: [
     { handler: require('../../') }
   ],
-  buildModules: ['@nuxt/typescript-build'],
   serverMiddleware: {
     '/api/echo': '~/api/echo',
     '/api/cookie': '~/api/cookie'
   },
   axios: {
+    polyfillFetch: true,
     prefix: '/api',
     proxy: true,
     credentials: true,

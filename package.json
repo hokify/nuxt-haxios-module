@@ -1,6 +1,6 @@
 {
   "name": "@hokify/nuxt-haxios-module",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Secure and easy Haxios integration with Nuxt.js",
   "license": "MIT",
   "contributors": [
@@ -21,10 +21,7 @@
     "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "build": "rollup -c",
-    "prepare-test": "nuxt build test/fixture",
-    "test": "yarn build && jest",
-    "prepublishOnly": "npm run build"
+    "test": "yarn lint && jest"
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
@@ -36,20 +33,14 @@
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "latest",
-    "@rollup/plugin-typescript": "^8.2.5",
-    "rollup": "^2.58.0",
-    "@typescript-eslint/parser": "^4.33.0",
     "babel-eslint": "latest",
     "babel-jest": "latest",
     "codecov": "latest",
-    "eslint": "latest",
+    "eslint": "^7",
     "jest": "latest",
     "nuxt-edge": "latest",
     "standard-version": "latest",
-    "typescript": "^4.4.3",
     "whatwg-fetch": "^3.6.2"
   }
 }

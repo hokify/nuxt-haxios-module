@@ -7,42 +7,42 @@ interface NuxtAxiosInstance extends AxiosStatic {
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>;
+    >(config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $get<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $delete<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $head<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $options<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $post<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, data?: INPUT, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, data?: INPUT, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $put<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
   $patch<
     RETURN = any,
     INPUT = any,
     CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
-    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>>
+    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
 
   setBaseURL(baseURL: string): void
   setHeader(name: string, value?: string | false, scopes?: string | string[]): void
